@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Restaurants from './components/Restaurants.js'
+import Searchbar from './components/Searchbar'
 
 
-function App(props) {
+function App({ props }) {
+
+    const [data, setData] = useState([]);
+    const [inputField, setInputField] = useState("");
+
+
+
     return (
         <div>
-            <Restaurants />
+            <Searchbar  data={data}
+                        setData={setData} />
+            <Restaurants data={data}
+                             />
+
         </div>
     );
 }
