@@ -1,0 +1,24 @@
+.parent {
+  display: grid;
+  grid-gap: 3rem;
+  place-items: center;
+  background-color: lightblue;
+  grid-template-rows: auto 1fr auto;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.header {
+  background-color: lightcoral;
+  font-size: 30px;
+}
+.footer {
+  background-color: lightgoldenrodyellow;
+}
+
+.cuisine {
+  font-size: 20px;
+}
