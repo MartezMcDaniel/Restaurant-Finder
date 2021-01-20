@@ -3,7 +3,7 @@ import axios from "axios";
 import "../Searchbar.css";
 
 function Searchbar({ data, setData }) {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(" ");
 
   let config = {
     headers: {
@@ -13,16 +13,15 @@ function Searchbar({ data, setData }) {
 
   console.log(query);
   const getData = async () => {
-    const url = `https://developers.zomato.com/api/v2.1/search?q=${query}&entity_id=292&entity_type=city`;
+    const url = `https://developers.zomato.com/api/v2.1/search?q=${query}&entity_id=216&entity_type=country`;
 
     const results = await axios
 
       .get(url, config)
       .then((response) => {
         const list = response.data.restaurants;
-        console.log(list);
         setData(list);
-
+        console.log(response);
         // list.map((item) => {
         //   return item.restaurant.name;
         // });
@@ -40,7 +39,6 @@ function Searchbar({ data, setData }) {
 
   const onChange = (e) => {
     setQuery(e.target.value);
-    console.log(query);
   };
 
   const handleSubmit = (event) => {
@@ -53,11 +51,19 @@ function Searchbar({ data, setData }) {
       <div>
         <form id="search-form">
           <input
-            className="search-bar"
+            type="text"
+            name=""
+            id="inputBar"
+            placeHolder="Search Ctiy"
+            autoComplete="off"
+          />
+
+          <input
+            className="search-cuisines"
             type="text"
             name="query"
             id="inputBar"
-            placeholder="Search Restaurants"
+            placeholder="Search Cuisine"
             autoComplete="off"
             onChange={onChange}
             value={query}
