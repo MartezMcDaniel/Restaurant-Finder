@@ -1,0 +1,17 @@
+.head {
+  text-align: center;
+}
+.logo {
+  background-image: url("./images/restaurant.jpeg");
+  display: flex;
+  margin-bottom: 0px;
+  opacity: 0.8;
+  color: #fff;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+}

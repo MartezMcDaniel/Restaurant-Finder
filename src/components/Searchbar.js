@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../Searchbar.css";
 
 function Searchbar({ data, setData }) {
   const [query, setQuery] = useState("");
@@ -10,75 +11,68 @@ function Searchbar({ data, setData }) {
     },
   };
 
+  console.log(query);
   const getData = async () => {
+    const url = `https://developers.zomato.com/api/v2.1/search?q=${query}&entity_id=292&entity_type=city`;
+
     const results = await axios
-      .get(
-        `https://developers.zomato.com/api/v2.1/search?q=${query}&entity_id=292&entity_type=city`,
-        config
-      )
+
+      .get(url, config)
       .then((response) => {
         const list = response.data.restaurants;
         console.log(list);
         setData(list);
-        list.map((item) => {
-          return item.restaurant.name;
-        });
+
+        // list.map((item) => {
+        //   return item.restaurant.name;
+        // });
       })
       .catch((error) => {
         console.log(error);
       });
+
+    setQuery("");
   };
 
   useEffect(() => {
     getData();
   }, []);
 
-  // const showData = () => {
-  //   console.log(data);
+  const onChange = (e) => {
+    setQuery(e.target.value);
+    console.log(query);
+  };
 
-  //   let city = document.getElementById("inputBar").value;
-
-  //   for (var i in data) {
-  //     const element = data[i];
-  //     if (element === undefined) return;
-  //     console.log(element);
-  //     if (element.restaurant.location.city === city) {
-  //       alert(element.restaurant.location.city);
-  //       return;
-  //     }
-  //   }
-  //   alert("Not Found");
-  // };
-
-  const onSubmit = (e) => {
-    e.preventdefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     getData();
   };
 
-  const onChange = (e) => {
-    setQuery(e.target.value);
-  };
-
   return (
-    <div>
-      <form id="search-form" onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="inputBar"
-          id="inputBar"
-          placeholder="Search Restaurants"
-          autoComplete="off"
-          onChange={onChange}
-        />
-        <input
-          type="button"
-          // onClick={showData}
-          name="submitButton"
-          value="Search"
-          id="getData()"
-        />
-      </form>
-    </div>
+    <body>
+      <div>
+        <form id="search-form">
+          <input
+            className="search-bar"
+            type="text"
+            name="query"
+            id="inputBar"
+            placeholder="Search Restaurants"
+            autoComplete="off"
+            onChange={onChange}
+            value={query}
+          />
+          <button
+            className="search-btn"
+            type="submit"
+            id="getData"
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </body>
   );
 }
 
