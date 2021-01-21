@@ -4,6 +4,8 @@ My app is a restaurant finder app that displays the search results of different 
 
 Below is a snapshot of my project: https://github.com/MartezMcDaniel/Restaurant-Finder
 
+![image](https://github.com/MartezMcDaniel/Restaurant-Finder/blob/master/src/images/Screen%20Shot%202021-01-21%20at%204.23.49%20PM.png)
+
 ## Technologies Used:
 
 - cli
