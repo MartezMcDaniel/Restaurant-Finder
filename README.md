@@ -1,3 +1,6 @@
+## Restaurant Finder
+https://martez-food-finder.herokuapp.com/
+
 # Description
 
 My app is a restaurant finder app that displays the search results of different restaurants in Chicago. I used the Zomato api to render the information such as the restaurants' name, address, type of cuisineaverage cost for two guests and a like to the menu. My app also rendered a photo of the restaurant or food served at the restaurant from the zomato api. I've worked in the restaurant industry for many years so this project was personal for me. I found the price point for two guests property really interesting as well. A good meal can get really expensive!
@@ -18,7 +21,7 @@ Below is a snapshot of my project: https://github.com/MartezMcDaniel/Restaurant-
 
 ##  Getting Started/Installation Instructions: 
 
-1. Go to my app urel: https://martez-food-finder.herokuapp.com/
+1. Go to my app url: https://martez-food-finder.herokuapp.com/
 2. Go to search bar and type in a restaurant cuisine.
 3. Page will render a card displaying the results.
 4. You can click on the menu tab to be directed to a menu of the restutant.
