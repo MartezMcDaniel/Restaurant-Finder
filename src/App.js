@@ -12,6 +12,7 @@ function App({ props }) {
         <div className="logo"></div>
         <h1 className="title">Restaurant Finder</h1>
       </section>
+      <br />
       <Searchbar data={data} setData={setData} />
       <Restaurants data={data} />
     </div>

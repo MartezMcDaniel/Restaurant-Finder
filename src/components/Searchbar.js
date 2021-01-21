@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../Searchbar.css";
 
 function Searchbar({ data, setData }) {
   const [query, setQuery] = useState(" ");
@@ -12,18 +11,17 @@ function Searchbar({ data, setData }) {
     },
   };
 
-  console.log(query);
   const getData = async () => {
     const url = `https://developers.zomato.com/api/v2.1/search?q=${query}&entity_id=292&entity_type=city`;
 
     // const url = `https://developers.zomato.com/api/v2.1/search?q=${query}&entity_id=216&entity_type=country`;
     // const url3 = `https://developers.zomato.com/api/v2.1/locations?query=${city}`;
     // const url4 = `https://developers.zomato.com/api/v2.1/search?entity_id=cincinnati&entity_type=city&q=${query}&count=100`;
-    const results = await axios
+    const results = axios
 
       .get(url, config)
       .then((response) => {
-        const list = response.data.restaurants;
+        let list = response.data.restaurants;
         setData(list);
         console.log(response);
       })
@@ -34,17 +32,11 @@ function Searchbar({ data, setData }) {
     setQuery("");
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  useEffect(() => {}, []);
 
   const onChange = (e) => {
     setQuery(e.target.value);
   };
-
-  // const onChange2 = (e) => {
-  //   setCity(e.target.value);
-  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
