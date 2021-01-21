@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My app is a restaurant finder app that displays the search results of different restaurants in Chicago. I used the Zomato api to render the information such as the restaurants' name, address, type of cuisineaverage cost for two guests and a like to the menu. My app also rendered a photo of the restaurant or food served at the restaurant from the zomato api. I've worked in the restaurant industry for many years so this project was personal for me. I found the price point for two guests property really interesting as well. A good meal can get really expensive!
 
-## Available Scripts
+Below is a snapshot of my project: https://github.com/MartezMcDaniel/Restaurant-Finder
 
-In the project directory, you can run:
+## Technologies Used:
 
-### `npm start`
+- cli
+- github
+- VSCode
+- Zomato api
+- Heroku
+- css/Javascript/React
+- Google fonts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##  Getting Started/Installation Instructions: 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Go to my app urel: https://martez-food-finder.herokuapp.com/
+2. Go to search bar and type in a restaurant cuisine.
+3. Page will render a card displaying the results.
+4. You can click on the menu tab to be directed to a menu of the restutant.
 
-### `npm test`
+In my Github account you can for and clone to a local repository at url: https://github.com/MartezMcDaniel/Restaurant-Finder
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future Goals: 
+I plan on taking my application to the next level by adding a city component to make the app global. I also want to link to a map component of the making it like "Yelp" or "Zomato"
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Wireframes
+![image](https://media.git.generalassemb.ly/user/32792/files/3ea15c00-557c-11eb-802c-7b94fca4ccec)
+### User Stories
+-As a user I want to find the hottest (new) restaurants in my city.
+-As a user I'd like to find restaurants that are open during the pandemic and see which
+restaurants have closed as well
+### MVP Goals
+I'll have a search form for the user to render results based on input. It will return data as well as imagery. 
+### Stretch Goals
+I would like to create a michelin starred component to my app as well that will allow users to see what restaurants return michelin starred results.
