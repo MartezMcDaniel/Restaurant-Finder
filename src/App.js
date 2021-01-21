@@ -8,8 +8,10 @@ function App({ props }) {
 
   return (
     <div>
-      <div className="logo"></div>
-      <h1 className="head">FOODIE</h1>
+      <section className="header">
+        <div className="logo"></div>
+        <h1 className="title">Restaurant Finder</h1>
+      </section>
       <Searchbar data={data} setData={setData} />
       <Restaurants data={data} />
     </div>
